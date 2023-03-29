@@ -1,0 +1,19 @@
+#usda 1.0
+(
+	defaultPrim = "ShaderBall"
+)
+
+def "ShaderBall" (
+	kind = "mesh"
+) {
+
+	def "PreviewMesh" (
+		kind = "mesh"
+		references = @./shaderball.usd@</Preview_Mesh>
+	){}
+	
+	def "CalibrationMesh" (
+		kind = "mesh"
+		references = @./shaderball.usd@</Calibration_Mesh>
+	){}
+}

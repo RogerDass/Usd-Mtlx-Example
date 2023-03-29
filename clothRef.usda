@@ -1,0 +1,13 @@
+#usda 1.0
+(
+	defaultPrim = "Cloth"
+)
+
+def "Cloth" (
+	kind = "mesh"
+) {
+	def "ClothMesh" (
+		kind = "mesh"
+		references = @./cloth.usd@</cloth>
+	){}
+}
