@@ -16,3 +16,4 @@ Below are screenshots from various renderer of this scene:
 # Omniverse Create RTX Accurate (IRAY)
 ![Create RTX IRAY](https://user-images.githubusercontent.com/11430334/229934241-621ba7ff-5e36-40fb-8e30-75cb89f802f2.png)
 - note that Create adds "materials/" to the texture path specified in the .mtlx file. You'll need to remove the "materials/" from the .mtlx file.
+- velvet doesn't look correct, but the texture map tiling seems to behave correctly. Thin film also doesn't behave.
