@@ -1,13 +1,19 @@
 <?xml version="1.0"?>
 <materialx version="1.38" colorspace="lin_rec709">
   <nodegraph name="NG_wood1">
+    <geompropvalue name="stcoords" type="vector2">
+      <!-- this value should match the name in the usda file -->
+      <input name="geomprop" type="string" value="UVMap" />
+    </geompropvalue>
     <tiledimage name="image_color" type="color3">
       <input name="file" type="filename" value="materials/textures/wood_color.jpg" colorspace="srgb_texture" />
       <input name="uvtiling" type="vector2" value="4.0, 4.0" />
+      <input name="texcoord" type="vector2" nodename="stcoords" />
     </tiledimage>
     <tiledimage name="image_roughness" type="float">
       <input name="file" type="filename" value="materials/textures/wood_roughness.jpg" />
       <input name="uvtiling" type="vector2" value="4.0, 4.0" />
+      <input name="texcoord" type="vector2" nodename="stcoords" />
     </tiledimage>
     <output name="out_color" type="color3" nodename="image_color" />
     <output name="out_roughness" type="float" nodename="image_roughness" />
