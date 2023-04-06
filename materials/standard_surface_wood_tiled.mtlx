@@ -6,12 +6,12 @@
       <input name="geomprop" type="string" value="UVMap" />
     </geompropvalue>
     <tiledimage name="image_color" type="color3">
-      <input name="file" type="filename" value="materials/textures/wood_color.jpg" colorspace="srgb_texture" />
+      <input name="file" type="filename" value="textures/wood_color.jpg" colorspace="srgb_texture" />
       <input name="uvtiling" type="vector2" value="4.0, 4.0" />
       <input name="texcoord" type="vector2" nodename="stcoords" />
     </tiledimage>
     <tiledimage name="image_roughness" type="float">
-      <input name="file" type="filename" value="materials/textures/wood_roughness.jpg" />
+      <input name="file" type="filename" value="textures/wood_roughness.jpg" />
       <input name="uvtiling" type="vector2" value="4.0, 4.0" />
       <input name="texcoord" type="vector2" nodename="stcoords" />
     </tiledimage>
