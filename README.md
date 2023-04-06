@@ -6,17 +6,20 @@ The goal is this USD scene is to assess the rendering consistency of MaterialX m
 Below are screenshots from various renderer of this scene:
 
 ## USDView
-![USDView screenshot](https://user-images.githubusercontent.com/11430334/229933793-c9b9d4a4-41f4-4847-99b4-f2d16e38db20.png)
-- note the UV texture map tiling isn't working correctly
+![usdview_screenshot_updated_mtlx_uv](https://user-images.githubusercontent.com/11430334/230465884-c01640c0-0fa0-4cff-85f8-64e249514b18.png)
+
+- note the UV texture map tiling behaves correctly when referencing what Blender called the uv coords inside the .mtlx (ex. "UVMap")
 
 ## Maya + Arnold
-![working USD_mtlx](https://user-images.githubusercontent.com/11430334/229934064-93aed9d9-34bb-4483-bdb0-454b54521190.jpg)
-- note the same UVTiling issue is present in Arnold as well
+![Arnold_software_mtlx_usd](https://user-images.githubusercontent.com/11430334/230466179-0cb11417-3864-4c9f-8fa7-82d29d4a4998.jpg)
+- note what works in usdview seems to work the same in Maya+Arnold (CPU rendering)
+![Arnold_GPU_mtlx_usd](https://user-images.githubusercontent.com/11430334/230466283-538a68c5-cf9b-473c-afe1-d8b4ebdb42c0.jpg)
+- note that GPU rendering still has an issue with UV Coordinates (look at the scrached brass ball)
 
 ## Omniverse Create RTX Accurate (IRAY)
-![Create RTX IRAY](https://user-images.githubusercontent.com/11430334/229934241-621ba7ff-5e36-40fb-8e30-75cb89f802f2.png)
-- note that Create adds "materials/" to the texture path specified in the .mtlx file. You'll need to remove the "materials/" from the .mtlx file.
-- velvet doesn't look correct, but the texture map tiling seems to behave correctly. Thin film also doesn't behave.
+![OVCreate_mtlx_uv](https://user-images.githubusercontent.com/11430334/230466730-0c986846-c750-4bbd-a3ec-a3ce5398f3f5.jpg)
+- note that UV tiling used to work before when .mtlx didn't point to correct geom uv coords property. Now UV tiling is incorrect.
+- velvet  and thin film doesn't look correct. Nvidia is looking into it.
 
 ## Reference renders from MaterialXView (for inconsistently rendered materials)
 Tiled Brass:
