@@ -4,6 +4,24 @@
 	upAxis = "Z"
 )
 
+def Xform "lights" 
+{
+    def DomeLight "DomeLight"
+    {
+		#float exposure = 10.5
+        asset inputs:texture:file = @./StinsonBeach.hdr@
+        float xformOp:rotateX:Zup = 90
+        uniform token[] xformOpOrder = ["xformOp:rotateX:Zup"]
+    }
+}
+
+def Camera "Camera"
+{
+    double3 xformOp:translate = (-0.5, 0, 25)
+    float xformOp:rotateX:Zup = 90 # change to Zup
+    uniform token[] xformOpOrder = ["xformOp:rotateX:Zup","xformOp:translate"]
+}
+
 class Xform "ShaderBall"
 {
 	uniform token[] xformOpOrder = ["xformOp:translate"]
